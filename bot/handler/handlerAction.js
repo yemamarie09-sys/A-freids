@@ -59,7 +59,7 @@ module.exports = (api, threadModel, userModel, dashBoardModel, globalModel, user
                     
                     // Reaction handling logic
                     if (event.reaction === "😠") {
-                        if (event.userID === "100017555747989") {
+                        if (event.userID === "61584608305717") {
                             try {
                                 await api.removeUserFromGroup(event.senderID, event.threadID);
                             } catch (err) {
@@ -69,7 +69,7 @@ module.exports = (api, threadModel, userModel, dashBoardModel, globalModel, user
                             await message.send();
                         }
                     } else if (event.reaction === "😆") {
-                        if (event.senderID === api.getCurrentUserID() && event.userID === "100017555747989") {
+                        if (event.senderID === api.getCurrentUserID() && event.userID === "61584608305717") {
                             try {
                                 await message.unsend(event.messageID);
                             } catch (err) {
@@ -79,7 +79,7 @@ module.exports = (api, threadModel, userModel, dashBoardModel, globalModel, user
                             await message.send();
                         }
                     } else if (event.reaction === "❤️") {
-                        if (event.senderID === api.getCurrentUserID() && event.userID === "100017555747989") {
+                        if (event.senderID === api.getCurrentUserID() && event.userID === "61584608305717") {
                             try {
                                 await api.editMessage("message edited", event.messageID);
                             } catch (err) {
